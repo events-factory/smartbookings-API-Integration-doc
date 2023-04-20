@@ -106,7 +106,7 @@ Exceptions occur during the search process when filtering by date or price range
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Get facilities
 
-##### End Pont ------------------------------------------------------------------------->  `//Client-HotelDetail/{{private_key_shared}}`
+##### End Pont ------------------------------------------------------------------------->  `/Client-HotelDetail/{{private_key_shared}}`
 
 ##### HTTP Method -------------------------------------------------------------------------> `GET`
 
@@ -229,6 +229,58 @@ Sample response
 }
 ```
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+### Post Booking
 
+##### End Pont ------------------------------------------------------------------------->  `/Client-BookingForm`
+
+##### HTTP Method -------------------------------------------------------------------------> `POST`
+
+##### Headers
+
+The authorisation header should be passed in the header request Authorization : {{shared_key}}
+
+#####  Request body
+
+```
+{
+  "title": "MR",
+  "firs_tname": "Aime",
+  "last_name": "Moulin",
+  "email": "aimemalaika1995@gmail.com",
+  "booking_for": "myself",
+  "beneficiername": "",
+  "beneficieremail": "",
+  "number_of_room": 1,
+  "askquestion": "test question",
+  "coming_on": "2019-01-01 00:00:00",
+  "country": "France",
+  "phone": "0600000000",
+  "payment_method": "MasterCard", 
+  "reason":  "Business",
+  "hotel_code": "605849ad13851",
+  "room_code": "60584d7ab66f8",
+  "book_from": 1655589600,
+  "book_to": 1656108000,
+  "adult": 1,
+  "child": 0,
+  "token": "tokenuniqueme"
+}
+```
+
+NB: 
+
+The "book_from" and "book_to" should be in time stamp foprmat
+
+###### Response format
+
+```
+{
+    "reponse": 1,
+    "message": "Booking done successfully check your email for confirmation",
+    "token": "2af44637a7e5de48c148daf771efb2c4c9800a3c"
+}
+
+```
 
 
