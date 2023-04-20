@@ -51,7 +51,7 @@ The JSON response is a collection of objects, where each object represents a sea
 Those parametters should be initially passed to the endpont in order to focus on the ares and limit the result default falues are returned in the filters API refer on the endpoint above
 
 ##### Response Body
-```
+```json
 {
     "message": "Request successfull",
     "data": {
@@ -116,7 +116,7 @@ Exceptions occur during the search process when filtering by date or price range
 
 Sample response
 
-````
+```json
   {
     "message": "Query successful",
     "hotel": {
@@ -242,7 +242,7 @@ The authorisation header should be passed in the header request Authorization : 
 
 #####  Request body
 
-```
+```json
 {
   "title": "MR",
   "firs_tname": "Aime",
@@ -274,7 +274,7 @@ The "book_from" and "book_to" should be in time stamp foprmat
 
 ###### Response format
 
-```
+```json
 {
     "reponse": 1,
     "message": "Booking done successfully check your email for confirmation",
